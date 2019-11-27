@@ -1,0 +1,22 @@
+spring:
+  data:
+    mongodb:
+      database: flowable
+      uri: mongodb://10.10.65.17:27018/flowable
+
+rocketmq:
+  producer:
+    isOnOff: on
+    groupName: test
+    namesrvAddr: 10.10.65.18:9876
+    maxMessageSize: 4096
+    sendMsgTimeout: 3000
+    retryTimesWhenSendFailed: 2
+  consumer:
+    isOnOff: on
+    groupName: test
+    namesrvAddr: 10.10.65.18:9876
+    consumeThreadMin: 5
+    topic: test123
+    consumeThreadMax: 20
+    consumeMessageBatchMaxSize: 1
